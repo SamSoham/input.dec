@@ -1,0 +1,38 @@
+*{  margin: 0;
+    padding: 0;}
+body{   box-sizing: border-box;
+        height: 100vh;
+        font-family: 'Times New Roman', Times, serif;
+        display: grid;
+        place-content: center;
+        background-color: rgb(223, 246, 255);}
+.box{ position: relative;
+      width: 20rem;
+      font-size: 20px;}
+#mail{ position: absolute;
+       font-size: inherit;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: none;
+       padding: 5px;
+       color: rgb(27, 27, 26);
+       border-radius: 5px;
+       outline: none;
+       border: 3px solid grey;}
+#mail:hover{ border: 3px solid rgb(71, 181, 255); }
+#mail:focus{ border: 3px solid rgb(19, 99, 223); }
+#lvl{  position: relative;
+       top: 8px;
+       color: rgb(19, 18, 18);
+       left: 8px;
+       cursor: text;
+       transition: top 200ms ease-in,left 200ms ease-in,font-size 200ms ease-in;
+       background-color: rgb(223, 246, 255);}
+
+#mail:focus ~ #lvl,#mail:not(:placeholder-shown)#mail:not(:focus)~#lvl{
+    top: -13px;
+    left: 4px;
+    font-size: 16px;   }
+
